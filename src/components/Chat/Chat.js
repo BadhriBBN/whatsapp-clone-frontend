@@ -54,7 +54,7 @@ const Chat = () => {
       return;
     }
 
-    await axios.post('http://localhost:5000/messages/new', {
+    await axios.post('https://whatsapp-clone-backend-3ytx.onrender.com/messages/new', {
       message: input,
       name: user.displayName,
       timestamp: new Date(),
@@ -112,6 +112,7 @@ const Chat = () => {
               placeholder="Type a message"
               onChange={(e) => setInput(e.target.value)}
               value={input}
+              
             />
 
             <button onClick={sendMessage}>Send a message</button>
