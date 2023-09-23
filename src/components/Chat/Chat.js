@@ -23,11 +23,11 @@ const Chat = () => {
 
   useEffect(() => {
     if (roomId) {
-      axios.get(`http://localhost:5000/room/${roomId}`).then((response) => {
+      axios.get(`https://whatsapp-clone-backend-3ytx.onrender.com/room/${roomId}`).then((response) => {
         setRoomName(response.data.name);
         setUpdatedAt(response.data.updatedAt);
       });
-      axios.get(`http://localhost:5000/messages/${roomId}`).then((response) => {
+      axios.get(`https://whatsapp-clone-backend-3ytx.onrender.com/messages/${roomId}`).then((response) => {
         setMessages(response.data);
       });
     }
